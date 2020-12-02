@@ -73,6 +73,7 @@ public class Pub {
         }
 
         static Drink byName(final String name) {
+//            return Drink.valueOf(name.toUpperCase());
             return Optional.ofNullable(reverseLookup.get(name))
                     .orElseThrow(() -> new NoSuchDrinkException(name));
         }
